@@ -18,20 +18,18 @@ namespace staticVoid
         static int EnterToConvert()
         {             
             int number = 0;
-            bool isContinue = true;
+            bool success = false;
 
-            while (isContinue)
+            while (success == false)
             {
                 Console.Write("Введите целое число: ");
                 string userInput = Console.ReadLine();
 
-                bool success = int.TryParse(userInput, out number);
-                if (success== false)
+                success = int.TryParse(userInput, out number);
+                if (success == false)
                 {              
                     Console.WriteLine($"Введенное значение: '{userInput}' не явлеяется целым числом, поробуйте еще раз.");
-                }         
-                
-                isContinue = !success;
+                }
             }
 
             return number;
