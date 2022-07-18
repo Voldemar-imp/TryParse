@@ -10,12 +10,12 @@ namespace staticVoid
     {
         static void Main(string[] args)
         {
-            int number = EnterToConvert();
+            int number = EnterNumber();
             Console.Clear();
             Console.WriteLine("Вы ввели число: " + number);
         }
 
-        static int EnterToConvert()
+        static int EnterNumber()
         {             
             int number = 0;
             bool success = false;
